@@ -42,7 +42,7 @@ modelisation :
 |---|---|---|
 | 00 | [`00_Scraping.ipynb`](Notebooks/00_Scraping.ipynb) | **Collecte** — scraping Wikipedia des ceremonies (1929-2026) |
 | 01 | [`01_Merge_datasets.ipynb`](Notebooks/01_Merge_datasets.ipynb) | **Construction du dataset** — merge IMDb + Oscar + enrichissement TMDb → `oscar_imdb_merged.parquet` |
-| 02 | [`02_EDA_visualisation.ipynb`](Notebooks/02_EDA_visualisation.ipynb) | **EDA** — visualisations du dataset |
+| 02 | [`02_EDA_visualisation.ipynb`](Notebooks/02_EDA_visualisation.ipynb) | **EDA** — visualisations du dataset (la dernière cellule lit optionnellement le parquet généré par le notebook 05) |
 | 03 | [`03_EDA_justification.ipynb`](Notebooks/03_EDA_justification.ipynb) | **EDA justificative** — NA, distributions, drift, set negatif |
 | 04 | [`04_Model_justification.ipynb`](Notebooks/04_Model_justification.ipynb) | **Hypotheses de modeles** par categorie (menu enseigne) |
 | 05 | [`05_Nomination_modeling.ipynb`](Notebooks/05_Nomination_modeling.ipynb) | **Etage 1 (principal)** — prediction des nominations |
@@ -99,7 +99,7 @@ Trois sources sont combinees dans `01_Merge_datasets.ipynb` pour produire le dat
 ```bash
 # Cloner le repo
 git clone git@github.com:jbouniol/albert-ml-oscar-predictions.git
-cd applied_ml_for_business
+cd albert-ml-oscar-predictions
 
 # Creer l'environnement virtuel
 python -m venv .venv
@@ -147,7 +147,6 @@ pour ~1100 films. Reruns instantanes grace au cache, reprise automatique en cas 
 │   ├── 04_Model_justification.ipynb   # Hypotheses de modeles par categorie
 │   ├── 05_Nomination_modeling.ipynb   # Etage 1 : prediction des nominations
 │   └── 06_Winner_modeling.ipynb       # Etage 2 : prediction du gagnant
-└── app/                    # Interface web Streamlit (optionnel)
 ```
 
 ## Licence
